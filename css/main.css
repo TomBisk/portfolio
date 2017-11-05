@@ -1,0 +1,13 @@
+
+.navbar {
+	background-color: #888;
+	display: flex;
+}
+
+.navbar-logo {
+	
+}
+
+.navbar-list {
+	display: flex;
+}
