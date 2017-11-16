@@ -1,27 +1,36 @@
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   height: 100%;
 }
 
 body {
-  font-family: 'Arial';
+  height: 100%;
 }
 
 /* header and navbar */
 
 header {
   position: fixed;
-  width: 100%;
+  width: 100%;  
 }
 
 .navbar {
 	background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ff3f00;
   padding: 0 20px; 
   flex-wrap: wrap;
 }
 
 .navbar-logo {
-	
+	font-size: 3rem;
+}
+
+.navbar-logo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar-list {
@@ -49,7 +58,7 @@ header {
 }
 
 .navbar-list a:hover {
-  color: #ff5b25;
+  color: #ff3f00;
 }
 
 /* sections */
@@ -68,3 +77,42 @@ header {
   height: 50%;
   width:  100%;
 }
+
+/* "Projects" section*/
+
+.projects {
+  background-color: #000;
+  height: auto;
+  min-height: 400px;
+  padding: 20px;
+}
+
+.projects-title {
+  color: #777;
+  font-size: 2.5rem;
+  margin: 30px;
+  text-align: center;  
+}
+.projects-folio {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-card {
+  background-color: #eee;
+  background-image: url('https://picsum.photos/330/220?image=885');
+  height: 220px;
+  margin: 20px;
+  width: 330px;
+}
+
+.card-link {
+  background: rgba(0, 0, 0, 0.4);
+  
+}
+
+card-link:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
