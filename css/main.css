@@ -1,13 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+}
+
+/* header and navbar */
+
+header {
+  position: fixed;
+  width: 100%;  
+}
 
 .navbar {
-	background-color: #888;
-	display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px; 
+	background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #ff3f00;
 }
 
 .navbar-logo {
-	
+	font-size: 3rem;
+}
+
+.navbar-logo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar-list {
-	display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: auto;
+  text-transform: uppercase;
 }
+
+.navbar, .navbar-logo, .navbar-list, .navbar-list a {
+  align-items: center;
+	display: flex;
+  min-height: 70px; 
+}
+
+.navbar, .navbar-list a{
+  color: #bbb;
+}
+
+.navbar-list a {
+  margin: 0 10px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.navbar-list a:hover {
+  color: #ff3f00;
+}
+
+/* sections */
+
+.home {
+  width: 100%;  
+  height: 100%;
+  background-image: url('../images/bckg-home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  width:  100%;
+  height: 50%;
+  background: #000;
+}
+
+/* "Projects" section*/
+
+.projects {
+  height: auto;
+  min-height: 400px;
+  padding: 20px;
+  background-color: #000;
+}
+
+.projects-title {
+  margin: 30px;
+  color: #777;
+  font-size: 2.5rem;
+  text-align: center;  
+}
+.projects-folio {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-card {
+  width: 330px;
+  height: 220px;
+  margin: 20px;
+  background-color: #eee;
+  background-image: url('https://picsum.photos/330/220?image=885');
+}
+
+.card-overlay {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease;
+  -moz-transition: opacity 0.15s ease;
+}
+
+.card-overlay:hover {
+  opacity: 1;
+}
+
+.card-button {
+  display: inline-block;
+  margin-bottom: 5%;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.card-button a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.card-button a:hover {
+  color: #ff3f00;
+}
+
