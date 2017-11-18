@@ -78,7 +78,7 @@ header {
   background: #000;
 }
 
-/* "Projects" section*/
+/* Section 'Projects' */
 
 .projects {
   height: auto;
@@ -134,6 +134,7 @@ header {
 }
 
 .card-button a {
+  padding: 12px 15px;
   color: #bbb;
   text-decoration: none;
 }
@@ -142,3 +143,24 @@ header {
   color: #ff3f00;
 }
 
+/* Section 'Contact' */
+
+.contact {
+  background: url('../images/bckg-contact.jpg');
+  background-position:top ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-form {
+ height: 300px;
+}
+
+/* Footer */
+
+.main-footer {
+  height: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid #f53124;
+  
+}
