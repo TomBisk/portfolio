@@ -14,7 +14,8 @@ body {
 
 header {
   position: fixed;
-  width: 100%;  
+  width: 100%;
+  z-index: 99;
 }
 
 .navbar {
@@ -70,6 +71,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .about {
@@ -105,18 +107,25 @@ header {
   margin: 20px;
   background-color: #eee;
   background-image: url('https://picsum.photos/330/220?image=885');
+  border: 1px solid #f53124;
+}
+
+.project-01 {
+  background-image: url('../images/330-220-fcc-tribute.jpg');
+  background-position: center;
 }
 
 .card-overlay {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  -webkit-transition: opacity 0.15s ease;
-  -moz-transition: opacity 0.15s ease;
+  -webkit-transition: opacity 0.35s ease;
+  -moz-transition: opacity 0.35s ease;
 }
 
 .card-overlay:hover {
@@ -124,32 +133,49 @@ header {
 }
 
 .card-button {
-  display: inline-block;
+  display: block;
   margin-bottom: 5%;
-  padding: 10px 15px;
-  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  width: 65px;
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #000;
   border-radius: 4px;
   font-size: 1rem;
 }
 
 .card-button a {
-  padding: 12px 15px;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
   color: #bbb;
   text-decoration: none;
 }
 
-.card-button a:hover {
+.card-button:hover a {
   color: #ff3f00;
 }
 
+span {
+/*  opacity: 0;*/
+  display: block;
+}
+
+/*
+span:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.55s ease;
+  -moz-transition: opacity 0.55s ease;
+}
+*/
 /* Section 'Contact' */
 
 .contact {
-  background: url('../images/bckg-contact.jpg');
-  background-position:top ;
+/*  background: #333;*/
+  background-image: url('../images/bckg-home.jpg');
+  background-position:center ;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .contact-form {
@@ -159,8 +185,22 @@ header {
 /* Footer */
 
 .main-footer {
+  display: flex;
   height: 150px;
   background: rgba(0, 0, 0, 0.8);
   border-top: 1px solid #f53124;
-  
+}
+
+.footer-elem {
+  margin: 20px;
+}
+.copyrights {
+  color: #666;
+  text-align: center;
+  font-weight: 600;
+}
+
+.main-footer .icon {
+  color: #fff;
+  font-size: 3rem
 }
