@@ -4,6 +4,7 @@ html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+	color: #ccc;
 }
 
 body {
@@ -48,8 +49,8 @@ header {
   min-height: 70px; 
 }
 
-.navbar, .navbar-list a{
-  color: #bbb;
+ .navbar-list a{
+  color: #ccc;
 }
 
 .navbar-list a {
@@ -82,16 +83,22 @@ header {
 
 /* Section 'Projects' */
 
+.anchor {
+	position: absolute;
+	z-index: -1;
+	top: -70px;
+	display: block;
+}
 .projects {
+	position: relative;
   height: auto;
   min-height: 400px;
-  padding: 20px;
+	padding: 30px;
   background-color: #000;
 }
 
 .projects-title {
-  margin: 30px;
-  color: #777;
+	margin-bottom: 20px;
   font-size: 2.5rem;
   text-align: center;  
 }
@@ -107,7 +114,7 @@ header {
   margin: 20px;
   background-color: #eee;
   background-image: url('https://picsum.photos/330/220?image=885');
-  border: 1px solid #f53124;
+  border: 1px solid #bbb;
 }
 
 .project-01 {
@@ -115,10 +122,14 @@ header {
   background-position: center;
 }
 
+.hidden .card-button {
+	visibility: hidden;
+}
+
 .card-overlay {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  flex-wrap: wrap; 
+  align-items: center;
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
@@ -132,14 +143,23 @@ header {
   opacity: 1;
 }
 
+.card-text {
+	display: block;
+	margin: 0 30px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+		
+/*	border: 1px solid #000;*/
+	text-align: center;
+}
 .card-button {
   display: block;
-  margin-bottom: 5%;
+/*  margin-bottom: 5%;*/
   padding: 0;
   width: 65px;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #000;
-  border-radius: 4px;
+  border: 1px solid #bbb;
+/*  border-radius: 4px;*/
   font-size: 1rem;
 }
 
@@ -147,7 +167,7 @@ header {
   display: block;
   margin: 0;
   padding: 10px 15px;
-  color: #bbb;
+  color: #ccc;
   text-decoration: none;
 }
 
@@ -160,13 +180,7 @@ span {
   display: block;
 }
 
-/*
-span:hover {
-  opacity: 1;
-  -webkit-transition: opacity 0.55s ease;
-  -moz-transition: opacity 0.55s ease;
-}
-*/
+
 /* Section 'Contact' */
 
 .contact {
@@ -176,35 +190,47 @@ span:hover {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.contact-title {
+	padding-top: 20px;
+	font-size: 2.5rem;
+  text-align: center;  
+}
 /* Contact form */
+form {
+	display: flex;
+}
 .contact-form {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	width: 40vw;
   height: 350px;
+	padding: 30px 5vw;
 }
 
+label {
+	display: block;
+}
 input, textarea {
-  display: block;
-  width: 400px;
   height: 30px;
-  margin: 10px 30px;
+  margin: 2px 0 15px 0;
+	padding: 0 10px;
   background: rgba(0, 0, 0, 0.8);
-  border: 1px solid red;
-/*  outline: none;*/
-  color: #bbb;
+  border: 1px solid #bbb;
+	border-radius: 10px;
+  color: #ccc;
   font-size: 1rem;
 }
 
 textarea {
-  width: 398px;
-  height: 100px;
+  height: 120px;
   
 }
 
 input[type=submit] {
-  width: 404px;
+
 }
+
 /* Footer */
 
 .main-footer {
@@ -230,13 +256,12 @@ input[type=submit] {
 
 .copyrights {
   margin: 14px;
-  color: #bbb;
   text-align: center;
   font-weight: 600;
 }
 
 .footer-elem .icon {
-  color: #bbb;
+  color: #ccc;
   font-size: 2.5rem
 }
 

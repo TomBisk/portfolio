@@ -35,21 +35,18 @@
 				</nav>
 			</header>
     </section>
-<!--
-			<section id="about" class="about"> 
-			    <p>
-			      about
-			    </p>
-			</section>
--->
+
 <!-- 'Projects' section-->
-		  <section id="projects" class="projects">
+		  <section class="projects">
+       <span class="anchor" id="projects"></span>
         <h1 class="projects-title"> projects</h1>
+        
         <div class="projects-folio">
          
           <div class="project-card project-01">
             <div class="card-overlay">
-             <button class="card-button">
+            	<span class="card-text">FreeCodeCamp - Basic Front End Development Projects: Build a Tribute Page.</span> 
+             	<button class="card-button">
               <a href="https://github.com/TomBisk/tribute-page" target="_blank">code</a>
              </button>
              <button class="card-button">
@@ -58,42 +55,64 @@
             </div> 
           </div>
           
-          <div class="project-card">
+          <div class="project-card project-02">
             <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Basic Front End Development Projects: Build a Personal Portfolio Webpage.</span> 
+             	<button class="card-button">
+              <a href="https://github.com/TomBisk/tribute-page" target="_blank">code</a>
+             </button>
              <button class="card-button">
+              <a href="https://tombisk.github.io/tribute-page/" target="_blank">live</a>
+             </button>
+            </div> 
+          </div>
+          
+          <div class="project-card project-03 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Build a Random Quote Machine.</span> 
+             	<button class="card-button">
               <a href="" target="_blank">code</a>
              </button>
              <button class="card-button">
               <a href="" target="_blank">live</a>
-             </button> 
-            </div>
+             </button>
+            </div> 
           </div>
           
-          <div class="project-card">
-            
-             <div class="card-overlay">
-           <span> Tribute Page Free Code Camp Project</span>              
-             <button class="card-button">
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Build a Random Quote Machine.</span> 
+             	<button class="card-button">
               <a href="" target="_blank">code</a>
              </button>
              <button class="card-button">
               <a href="" target="_blank">live</a>
-             </button> 
-            </div>
+             </button>
+            </div> 
           </div>
-          
         </div>
 			</section>
 <!-- 'Contact' section-->
-			<section id="contact" class="contact"> 
-			  <div class="contact-form">
-			    <form action="" method="post">
-			      <input type="text" id="name" name="name" placeholder="Your name">
-			      <input type="text" id="email" name="email" placeholder="Your email">
-			      <textarea name="message" id="message">Your message...</textarea>
-			      <input type="submit" value="Send message">
-			    </form>
-			  </div>
+			<section id="contact" class="contact">
+  <!-- Contact form -->
+       <h1 class="contact-title">contact</h1>
+        <form action="" method="post">
+					<div class="contact-form">
+         
+           		<label for="name">Name:</label>
+           		<input type="text" id="name" name="name" placeholder="Your name">
+           	
+            	<label for="">Email:</label>
+			      	<input type="text" id="email" name="email" placeholder="Your email">
+					 
+		       		<label for="">Message:</label>
+			      	<textarea name="message" id="message" placeholder="Please write your message here..."></textarea>
+			      
+				      <input type="submit" value="Send message">	
+							
+			    </div>
+        </form>
+  <!-- Footer -->
 		    <footer class="main-footer">
           
           <p class="copyrights footer-elem">&copy; 2017 Tomasz Bochenek</p>
