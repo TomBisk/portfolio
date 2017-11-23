@@ -5,22 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title></title>
 		<meta name="description" content="Personal Portfolio Webpage - FreeCodeCamp Project">
-		<link rel="stylesheet" href="./css/reset.css">
-		<link rel="stylesheet" href="./css/main.css">
+		<link href="./css/reset.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	</head>
 	<body>
-		<section id="home" class="home"> 
+		<section id="home" class="home">
+		<span class="anchor" id="about"></span>
 			<header>
 				<nav class="navbar">
 					<div class="navbar-logo">
 					  <a href="https://tombisk.github.io">
-  						<p>&lt;/&gt;</p>
+  						<p>&lt;TomBisk&nbsp;/&gt;</p>
             </a>
 					</div>
 					<ul class="navbar-list">
-						<li>
-							<a href="#home">home</a>
-						</li>
 						<li>
 							<a href="#about">about</a>
 						</li>
@@ -34,43 +33,157 @@
 				</nav>
 			</header>
     </section>
-<!--
-			<section id="about" class="about"> 
-			    <p>
-			      about
-			    </p>
-			</section>
--->
-		  <section id="projects" class="projects">
+
+<!-- 'Projects' section-->
+		  <section class="projects">
+       <span class="anchor" id="projects"></span>
         <h1 class="projects-title"> projects</h1>
+        
         <div class="projects-folio">
-          <div class="project-card">
-            <img src="https://picsum.photos/330/220?image=885" alt="">
-            <a class="card-link" href="" target="_blank">
-            </a>
-          </div>
-          <div class="project-card">
-            <a href="" target="_blank">
-            </a>
-          </div>
-          <div class="project-card">
+         
+          <div class="project-card project-01">
             <div class="card-overlay">
-             <button class="card-button">
-              <a href="" target="_blank">code</a>
+            	<span class="card-text">FreeCodeCamp - Basic Front End Development Projects: Build a Tribute Page.</span> 
+             	<button class="card-button">
+              <a href="https://github.com/TomBisk/tribute-page" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="https://tombisk.github.io/tribute-page/" target="_blank">live</a>
              </button>
-             <button class="card-button">
+            </div> 
+          </div>
+          
+          <div class="project-card project-02">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Basic Front End Development Projects: Build a Personal Portfolio Webpage.</span> 
+             	<button class="card-button">
+              <a href="https://github.com/TomBisk/tribute-page" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="https://tombisk.github.io/tribute-page/" target="_blank">live</a>
+             </button>
+            </div> 
+          </div>
+          
+          <div class="project-card project-03 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Build a Random Quote Machine.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
               <a href="" target="_blank">live</a>
              </button>
-             
-            </div>
+            </div> 
+          </div>
+          
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Show the Local Weather.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+             </button>
+            </div> 
+          </div>
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Build a Wikipedia Viewer.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+              </button>
+            </div> 
+          </div>
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Intermediate Front End Development Projects: Use the Twitch.tv JSON API.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+              </button>
+            </div> 
+          </div>
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Advanced Front End Development Projects: Build a JavaScript Calculator.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+              </button>
+            </div> 
+          </div>
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Advanced Front End Development Projects: Build a Pomodoro Clock.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+             </button>
+            </div> 
+          </div>
+          <div class="project-card project-04 hidden">
+            <div class="card-overlay">
+            	<span class="card-text">FreeCodeCamp - Advanced Front End Development Projects: Build a Tic Tac Toe Game.</span> 
+             	<button class="card-button">
+              <a href="" target="_blank">code</a>
+             	</button>
+             	<button class="card-button">
+              <a href="" target="_blank">live</a>
+             </button>
+            </div> 
           </div>
         </div>
 			</section>
-			<section id="contact" class=""> 
-			    <p>
-			      home
-			    </p>
+<!-- 'Contact' section-->
+			<section id="contact" class="contact">
+  <!-- Contact form -->
+       <h1 class="contact-title">contact</h1>
+        <form action="" method="post">
+					<div class="contact-form">
+         
+           		<label for="name">Name:</label>
+           		<input type="text" id="name" name="name" placeholder="Your name">
+           	
+            	<label for="email">Email:</label>
+			      	<input type="text" id="email" name="email" placeholder="Your email">
+					 
+		       		<label for="message">Message:</label>
+			      	<textarea name="message" id="message" placeholder="Please write your message here..."></textarea>
+			      
+				      <input type="submit" value="Send message" disabled>	
+							
+			    </div>
+        </form>
+  <!-- Footer -->
+		    <footer class="main-footer">
+          
+          <p class="copyrights footer-elem">&copy; 2017 Tomasz Bochenek</p>
+          <div class="footer-elem">
+            <a href="https://github.com/TomBisk" target="_blank">
+              <i class="fa fa-github icon" aria-hidden="true"></i>
+            </a>
+          
+            <a href="https://codepen.io/TomBisk/" target="_blank">
+              <i class="fa fa-codepen icon" aria-hidden="true"></i>
+            </a>
+          
+            <a href="https://www.freecodecamp.org/tombisk" target="_blank">
+              <i class="fa fa-free-code-camp icon" aria-hidden="true"></i>
+            </a>
+          </div>
+          
+		    </footer>
 			</section>		
-		
 	</body>
 </html>

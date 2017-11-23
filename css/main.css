@@ -4,6 +4,7 @@ html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+	color: #ccc;
 }
 
 body {
@@ -14,22 +15,24 @@ body {
 
 header {
   position: fixed;
-  width: 100%;  
+  width: 100%;
+  z-index: 99;
 }
 
 .navbar {
   flex-wrap: wrap;
   padding: 0 20px; 
 	background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #ff3f00;
+  border-bottom: 1px solid #bbb; 
 }
 
 .navbar-logo {
-	font-size: 3rem;
+	font-size: 2.5rem;
+	font-family: Courier;	
 }
 
 .navbar-logo a {
-  color: #fff;
+  color: #ff3f00;
   text-decoration: none;
 }
 
@@ -44,11 +47,11 @@ header {
 .navbar, .navbar-logo, .navbar-list, .navbar-list a {
   align-items: center;
 	display: flex;
-  min-height: 70px; 
+  min-height: 90px; 
 }
 
-.navbar, .navbar-list a{
-  color: #bbb;
+ .navbar-list a{
+  color: #ccc;
 }
 
 .navbar-list a {
@@ -70,6 +73,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .about {
@@ -78,18 +82,24 @@ header {
   background: #000;
 }
 
-/* "Projects" section*/
+/* Section 'Projects' */
 
+.anchor {
+	position: absolute;
+	z-index: -1;
+	top: -90px;
+	display: block;
+}
 .projects {
+	position: relative;
   height: auto;
   min-height: 400px;
-  padding: 20px;
+	padding: 30px;
   background-color: #000;
 }
 
 .projects-title {
-  margin: 30px;
-  color: #777;
+	margin-bottom: 20px;
   font-size: 2.5rem;
   text-align: center;  
 }
@@ -105,40 +115,156 @@ header {
   margin: 20px;
   background-color: #eee;
   background-image: url('https://picsum.photos/330/220?image=885');
+  border: 1px solid #bbb;
+}
+
+.project-01 {
+  background-image: url('../images/330-220-fcc-tribute.jpg');
+  background-position: center;
+}
+
+.hidden .card-button {
+	visibility: hidden;
 }
 
 .card-overlay {
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap; 
+  align-items: center;
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  -webkit-transition: opacity 0.15s ease;
-  -moz-transition: opacity 0.15s ease;
+  -webkit-transition: opacity 0.35s ease;
+  -moz-transition: opacity 0.35s ease;
 }
 
 .card-overlay:hover {
   opacity: 1;
 }
 
+.card-text {
+	display: block;
+	margin: 0 30px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+		
+/*	border: 1px solid #000;*/
+	text-align: center;
+}
 .card-button {
-  display: inline-block;
-  margin-bottom: 5%;
-  padding: 10px 15px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid #000;
-  border-radius: 4px;
+  display: block;
+/*  margin-bottom: 5%;*/
+  padding: 0;
+  width: 65px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #bbb;
+/*  border-radius: 4px;*/
   font-size: 1rem;
 }
 
 .card-button a {
-  color: #bbb;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  color: #ccc;
   text-decoration: none;
 }
 
-.card-button a:hover {
+.card-button:hover a {
   color: #ff3f00;
 }
 
+span {
+/*  opacity: 0;*/
+  display: block;
+}
+
+
+/* Section 'Contact' */
+
+.contact {
+  background-image: url('../images/bckg-contact.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact-title {
+	padding-top: 20px;
+	font-size: 2.5rem;
+  text-align: center;  
+}
+/* Contact form */
+form {
+	display: flex;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	width: 40vw;
+  height: 350px;
+	padding: 30px 5vw;
+}
+
+label {
+	display: block;
+	color: #eee;
+}
+input, textarea {
+  height: 30px;
+  margin: 2px 0 15px 0;
+	padding: 0 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #bbb;
+	border-radius: 10px;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 120px;
+  
+}
+
+input[type=submit]:hover {
+	background-color: #ff3f00;
+}
+
+/* Footer */
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  
+  min-height: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid #bbb;
+}
+
+.footer-elem {
+  margin: 14px;
+  
+}
+.footer-elem a {
+  margin: 0 14px;
+}
+
+.copyrights {
+  margin: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer-elem .icon {
+  color: #ccc;
+  font-size: 2.5rem
+}
+
+.footer-elem .icon:hover {
+  color: #ff3f00;  
+}
