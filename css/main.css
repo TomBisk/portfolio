@@ -27,11 +27,12 @@ header {
 }
 
 .navbar-logo {
-	font-size: 3rem;
+	font-size: 2.5rem;
+	font-family: Courier;	
 }
 
 .navbar-logo a {
-  color: #fff;
+  color: #ff3f00;
   text-decoration: none;
 }
 
@@ -46,7 +47,7 @@ header {
 .navbar, .navbar-logo, .navbar-list, .navbar-list a {
   align-items: center;
 	display: flex;
-  min-height: 70px; 
+  min-height: 90px; 
 }
 
  .navbar-list a{
@@ -86,7 +87,7 @@ header {
 .anchor {
 	position: absolute;
 	z-index: -1;
-	top: -70px;
+	top: -90px;
 	display: block;
 }
 .projects {
@@ -184,8 +185,8 @@ span {
 /* Section 'Contact' */
 
 .contact {
-  background-image: url('../images/bckg-home.jpg');
-  background-position:center ;
+  background-image: url('../images/bckg-contact.jpg');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -210,6 +211,7 @@ form {
 
 label {
 	display: block;
+	color: #eee;
 }
 input, textarea {
   height: 30px;
@@ -218,7 +220,7 @@ input, textarea {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid #bbb;
 	border-radius: 10px;
-  color: #ccc;
+  color: #bbb;
   font-size: 1rem;
 }
 
@@ -227,8 +229,8 @@ textarea {
   
 }
 
-input[type=submit] {
-
+input[type=submit]:hover {
+	background-color: #ff3f00;
 }
 
 /* Footer */
@@ -251,8 +253,6 @@ input[type=submit] {
 .footer-elem a {
   margin: 0 14px;
 }
-.footer-elem a:hover {
-}
 
 .copyrights {
   margin: 14px;
@@ -266,5 +266,5 @@ input[type=submit] {
 }
 
 .footer-elem .icon:hover {
-  color: #f53124;  
+  color: #ff3f00;  
 }
