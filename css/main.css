@@ -114,13 +114,17 @@ header {
   height: 220px;
   margin: 20px;
   background-color: #eee;
-  background-image: url('https://picsum.photos/330/220?image=885');
+  background-image: url('../images/330-220-soon.jpg');
+  background-position: center;
   border: 1px solid #bbb;
 }
 
 .project-01 {
   background-image: url('../images/330-220-fcc-tribute.jpg');
-  background-position: center;
+}
+
+.project-02 {
+	background-image: url('../images/330-220-fcc-portfolio.jpg');
 }
 
 .hidden .card-button {
