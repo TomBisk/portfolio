@@ -272,3 +272,29 @@ input[type=submit]:hover {
 .footer-elem .icon:hover {
   color: #ff3f00;  
 }
+
+
+@media only screen and (max-width: 420px) {
+	.navbar {
+		padding: 10px;
+	}
+	
+	.navbar-logo {
+		font-size: 1rem;
+	}
+
+	.navbar-list a {
+		margin: 0 5px;
+		padding: 0 5px;
+		font-size: 0.8rem;
+	}
+
+	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
+  min-height: 20px; 
+	}
+	
+	.contact-form {
+		width: 100vw;
+		padding: 0px 5vw;
+	}
+}
