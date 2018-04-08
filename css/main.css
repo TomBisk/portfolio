@@ -1,39 +1,161 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
+/* Nexus 5 res: 360x640 */
+/* Apple IPad res: 768x1024 */
+/* asus laser 2 res: 360x 640  pixel ratio 2*/
+
 html {
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+	height: 100%;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
 	color: #ccc;
 }
 
 body {
-  height: 100%;
+	height: 100%;
 }
 
-/* header and navbar */
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100vh;
+	background-color: #000;
+}
+
+.header-logo  {
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+header img {
+	width: 100%;
+}
+
+header h1 {
+	margin: 0.5em;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+header h2 {
+	text-align: center;
+	font-size: 1.25em;
+}
+
+.navbar {
+	border-top: 1px solid #bbb;
+ 	border-bottom: 1px solid #bbb;
+}
+
+.navbar-list {
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+  	text-transform: uppercase;
+}
+
+.navbar-list, .navbar-list a {
+  align-items: center;
+  min-height: 60px; 
+}
+
+ .navbar-list a{
+  color: #ccc;
+}
+
+.navbar-list a {
+  margin: 0 10px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.home {
+  position: relative;
+  width: 100%;  
+  height: 100%;
+  background-image: url('../img/bckg-home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  width:  100%;
+  height: 50%;
+  background: #000;
+}
+
+/*
+.navbar-list a:hover {
+  color: #ff3f00;
+}
+*/
+/*
+@media only screen and (min-width: 420px) {
+	.navbar {
+		padding: 10px;
+	}
+	
+	.navbar-logo {
+		font-size: 1rem;
+	}
+
+	.navbar-list a {
+		margin: 0 5px;
+		padding: 0 5px;
+		font-size: 0.8rem;
+	}
+
+	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
+  min-height: 20px; 
+	}
+	
+	.projects .anchor {
+	top: -20px;
+  }
+	
+	
+	.contact .anchor {
+	top: -20px;
+	position: absolute;
+	z-index: -1;
+	}
+	
+	.contact-form {
+		width: 100vw;
+		padding: 0px 5vw;
+	}
+	
+	.main-footer {
+		min-height: auto;
+	}
+	
+	.footer-elem  {
+	margin: 7px;
+	}
+	
+	.copyrights {
+	margin: 0 0 7px 0;	
+	}
+}
+*/
+
+
+@media screen and (min-width: 1280px){
+	
 
 header {
   position: fixed;
-  width: 100%;
   z-index: 99;
+  width: 100%;
 }
 
 .navbar {
   flex-wrap: wrap;
+  border-bottom: 1px solid #bbb; 
   padding: 0 20px; 
 	background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #bbb; 
-}
-
-.navbar-logo {
-	font-size: 2.5rem;
-	font-family: Courier;	
-}
-
-.navbar-logo a {
-  color: #ff3f00;
-  text-decoration: none;
 }
 
 .navbar-list {
@@ -45,8 +167,8 @@ header {
 }
 
 .navbar, .navbar-logo, .navbar-list, .navbar-list a {
-  align-items: center;
 	display: flex;
+  align-items: center;
   min-height: 90px; 
 }
 
@@ -67,13 +189,13 @@ header {
 /* sections */
 
 .home {
+  position: relative;
   width: 100%;  
   height: 100%;
-  background-image: url('../images/bckg-home.jpg');
+  background-image: url('../img/bckg-home.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .about {
@@ -84,7 +206,7 @@ header {
 
 /* Section 'Projects' */
 
-.anchor {
+.projects .anchor {
 	position: absolute;
 	z-index: -1;
 	top: -90px;
@@ -101,6 +223,7 @@ header {
 .projects-title {
 	margin-bottom: 20px;
   font-size: 2.5rem;
+	font-weight: bolder;
   text-align: center;  
 }
 .projects-folio {
@@ -110,21 +233,22 @@ header {
   justify-content: space-evenly;
 }
 .project-card {
+  margin: 20px;
+  border: 1px solid #bbb;
   width: 330px;
   height: 220px;
-  margin: 20px;
   background-color: #eee;
-  background-image: url('../images/330-220-soon.jpg');
+  background-image: url('../img/330-220-soon.jpg');
   background-position: center;
-  border: 1px solid #bbb;
+	background-size: cover;
 }
 
 .project-01 {
-  background-image: url('../images/330-220-fcc-tribute.jpg');
+  background-image: url('../img/330-220-fcc-tribute.jpg');
 }
 
 .project-02 {
-	background-image: url('../images/330-220-fcc-portfolio.jpg');
+	background-image: url('../img/330-220-fcc-portfolio.jpg');
 }
 
 .hidden .card-button {
@@ -133,15 +257,15 @@ header {
 
 .card-overlay {
   display: flex;
-  flex-wrap: wrap; 
   align-items: center;
+  flex-wrap: wrap; 
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   -webkit-transition: opacity 0.35s ease;
   -moz-transition: opacity 0.35s ease;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .card-overlay:hover {
@@ -153,18 +277,14 @@ header {
 	margin: 0 30px;
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.5);
-		
-/*	border: 1px solid #000;*/
 	text-align: center;
 }
 .card-button {
   display: block;
-/*  margin-bottom: 5%;*/
-  padding: 0;
-  width: 65px;
-  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #bbb;
-/*  border-radius: 4px;*/
+  width: 65px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   font-size: 1rem;
 }
 
@@ -172,8 +292,8 @@ header {
   display: block;
   margin: 0;
   padding: 10px 15px;
-  color: #ccc;
   text-decoration: none;
+  color: #ccc;
 }
 
 .card-button:hover a {
@@ -181,30 +301,33 @@ header {
 }
 
 span {
-/*  opacity: 0;*/
   display: block;
 }
-
 
 /* Section 'Contact' */
 
 .contact {
-  background-image: url('../images/bckg-contact.jpg');
+	position: relative;
+  background-image: url('../img/bckg-contact.jpg');
+  background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .contact-title {
 	padding-top: 20px;
 	font-size: 2.5rem;
+	font-weight: bolder;
   text-align: center;  
 }
+
 /* Contact form */
+
 form {
 	display: flex;
 }
+
 .contact-form {
 	display: flex;
 	flex-direction: column;
@@ -217,20 +340,20 @@ label {
 	display: block;
 	color: #eee;
 }
+
 input, textarea {
-  height: 30px;
   margin: 2px 0 15px 0;
-	padding: 0 10px;
-  background: rgba(0, 0, 0, 0.8);
   border: 1px solid #bbb;
 	border-radius: 10px;
-  color: #bbb;
+  height: 30px;
+	padding: 0 10px;
+  background: rgba(0, 0, 0, 0.8);
   font-size: 1rem;
+  color: #bbb;
 }
 
 textarea {
   height: 120px;
-  
 }
 
 input[type=submit]:hover {
@@ -242,59 +365,37 @@ input[type=submit]:hover {
 .main-footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap-reverse;
-  
+  justify-content: space-around;
+  border-top: 1px solid #bbb;
   min-height: 100px;
   background: rgba(0, 0, 0, 0.8);
-  border-top: 1px solid #bbb;
 }
 
 .footer-elem {
   margin: 14px;
   
 }
+
 .footer-elem a {
   margin: 0 14px;
 }
 
 .copyrights {
   margin: 14px;
-  text-align: center;
   font-weight: 600;
+  text-align: center;
 }
 
 .footer-elem .icon {
+  font-size: 2.5rem;
   color: #ccc;
-  font-size: 2.5rem
 }
 
 .footer-elem .icon:hover {
   color: #ff3f00;  
 }
 
-
-@media only screen and (max-width: 420px) {
-	.navbar {
-		padding: 10px;
-	}
-	
-	.navbar-logo {
-		font-size: 1rem;
-	}
-
-	.navbar-list a {
-		margin: 0 5px;
-		padding: 0 5px;
-		font-size: 0.8rem;
-	}
-
-	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
-  min-height: 20px; 
-	}
-	
-	.contact-form {
-		width: 100vw;
-		padding: 0px 5vw;
-	}
 }
+/*  @MEDIA */
+
