@@ -29,7 +29,7 @@ header {
 }
 
 header img {
-	width: 100%;
+	max-width: 100%;
 }
 
 header h1 {
@@ -60,7 +60,7 @@ header h2 {
   min-height: 60px; 
 }
 
- .navbar-list a{
+ .navbar-list a {
   color: #ccc;
 }
 
@@ -91,6 +91,168 @@ header h2 {
   color: #ff3f00;
 }
 */
+
+
+/*
+.projects .anchor {
+	position: absolute;
+	z-index: -1;
+	top: -90px;
+	display: block;
+}
+*/
+.projects {
+	position: relative;
+  height: auto;
+  min-height: 400px;
+	padding: 30px;
+  background-color: #000;
+}
+
+.projects-title {
+	margin-bottom: 20px;
+  font-size: 2.5rem;
+	font-weight: bolder;
+  text-align: center;  
+}
+.projects-folio {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-card {
+  margin: 20px;
+  border: 1px solid #bbb;
+  width: 330px;
+  height: 220px;
+  background-color: #eee;
+  background-image: url('../img/330-220-soon.jpg');
+  background-position: center;
+	background-size: cover;
+}
+
+.project-01 {
+  background-image: url('../img/330-220-fcc-tribute.jpg');
+}
+
+.project-02 {
+	background-image: url('../img/330-220-fcc-portfolio.jpg');
+}
+
+.hidden .card-button {
+	visibility: hidden;
+}
+
+.card-overlay {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s ease;
+  -moz-transition: opacity 0.35s ease;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*
+.card-overlay:hover {
+  opacity: 1;
+}
+*/
+
+.card-text {
+	display: block;
+	margin: 0 30px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
+.card-button {
+  display: block;
+  border: 1px solid #bbb;
+  width: 65px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+
+.card-button a {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.card-button:hover a {
+  color: #ff3f00;
+}
+
+span {
+  display: block;
+}
+
+/* Section 'Contact' */
+.contact {
+	position: relative;
+  background-image: url('../img/bckg-contact.jpg');
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-title {
+	padding-top: 20px;
+	font-size: 2.5rem;
+	font-weight: bolder;
+  text-align: center;  
+}
+
+/* Contact form */
+
+form {
+	display: flex;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	width: 40vw;
+  height: 350px;
+	padding: 30px 5vw;
+}
+
+label {
+	display: block;
+	color: #eee;
+}
+
+input, textarea {
+  margin: 2px 0 15px 0;
+  border: 1px solid #bbb;
+	border-radius: 10px;
+  height: 30px;
+	padding: 0 10px;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+  color: #bbb;
+}
+
+textarea {
+  height: 120px;
+}
+
+input[type=submit]:hover {
+	background-color: #ff3f00;
+}
+
+
+
+
 /*
 @media only screen and (min-width: 420px) {
 	.navbar {
@@ -141,8 +303,28 @@ header h2 {
 }
 */
 
+@media screen and (min-width: 640px) {
+	
+	header {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	.header-logo {
+		flex-basis: 30%;
+	}
+	
+	.header-title {
+		flex-basis: 70%;
+	}
+	
+	.navbar {
+		flex-basis: 100%;
+	}
+}
 
-@media screen and (min-width: 1280px){
+
+@media screen and (min-width: 1280px) {
 	
 
 header {
