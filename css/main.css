@@ -257,56 +257,6 @@ textarea {
 }
 
 
-/*
-@media only screen and (min-width: 420px) {
-	.navbar {
-		padding: 10px;
-	}
-	
-	.navbar-logo {
-		font-size: 1rem;
-	}
-
-	.navbar-list a {
-		margin: 0 5px;
-		padding: 0 5px;
-		font-size: 0.8rem;
-	}
-
-	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
-  min-height: 20px; 
-	}
-	
-	.projects .anchor {
-	top: -20px;
-  }
-	
-	
-	.contact .anchor {
-	top: -20px;
-	position: absolute;
-	z-index: -1;
-	}
-	
-	.contact-form {
-		width: 100vw;
-		padding: 0px 5vw;
-	}
-	
-	.main-footer {
-		min-height: auto;
-	}
-	
-	.footer-elem  {
-	margin: 7px;
-	}
-	
-	.copyrights {
-	margin: 0 0 7px 0;	
-	}
-}
-*/
-
 @media screen and (min-width: 640px) {
 	
 	header {
@@ -336,7 +286,9 @@ textarea {
 	}
 }
 
-
+@media screen and (min-width: 768px) {
+	
+}
 
 @media screen and (min-width: 1200px) {
 	
