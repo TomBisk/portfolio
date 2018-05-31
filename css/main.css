@@ -74,7 +74,7 @@ header h2 {
 	position: relative;
 	width: 100%;  
 	height: 100%;
-	background-image: url('../img/bckg-home.jpg');
+	background-image: url('../img/bckg-home_small.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -172,7 +172,7 @@ span {
 
 /* Section 'Contact' */
 .contact {
-	background-image: url('../img/bckg-contact.jpg');
+	background-image: url('../img/bckg-contact_small.jpg');
 	background-attachment: fixed;
 	background-position: top;
 	background-repeat: no-repeat;
@@ -287,7 +287,13 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+	.home {
+		background-image: url('../img/bckg-home_medium.jpg');
+	}
 	
+	.contact {
+		background-image: url('../img/bckg-contact_medium.jpg');
+	}
 }
 
 @media screen and (min-width: 1200px) {
