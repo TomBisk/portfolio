@@ -300,16 +300,18 @@ textarea {
 	
 
 header {
+	flex-wrap: nowrap;
   position: fixed;
   z-index: 99;
   width: 100%;
+	height: 90px;
 }
 
 .navbar {
   flex-wrap: wrap;
   border-bottom: 1px solid #bbb; 
   padding: 0 20px; 
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-list {
