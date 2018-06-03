@@ -305,6 +305,12 @@ header {
   z-index: 99;
   width: 100%;
 	height: 90px;
+	
+}
+	
+.logo  {
+	height: 90px;
+/*	margin: 0 auto;*/
 }
 
 .navbar {
