@@ -1,130 +1,130 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
+/* Nexus 5 res: 360x640 */
+/* Apple IPad res: 768x1024 */
+/* asus laser 2 res: 360x 640  pixel ratio 2*/
+
 html {
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+	height: 100%;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
 	color: #ccc;
 }
 
 body {
-  height: 100%;
+	height: 100%;
 }
 
-/* header and navbar */
-
 header {
-  position: fixed;
-  width: 100%;
-  z-index: 99;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100vh;
+	background-color: #000;
+}
+
+.header-logo  {
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+header img {
+	max-width: 100%;
+}
+
+header h1 {
+	margin: 0.5em;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+header h2 {
+	text-align: center;
+	font-size: 1.25em;
 }
 
 .navbar {
-  flex-wrap: wrap;
-  padding: 0 20px; 
-	background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #bbb; 
-}
-
-.navbar-logo {
-	font-size: 2.5rem;
-	font-family: Courier;	
-}
-
-.navbar-logo a {
-  color: #ff3f00;
-  text-decoration: none;
+	border-top: 1px solid #bbb;
+ 	border-bottom: 1px solid #bbb;
 }
 
 .navbar-list {
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin-left: auto;
-  text-transform: uppercase;
-}
-
-.navbar, .navbar-logo, .navbar-list, .navbar-list a {
-  align-items: center;
 	display: flex;
-  min-height: 90px; 
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+  	text-transform: uppercase;
 }
 
- .navbar-list a{
-  color: #ccc;
+.navbar-list, .navbar-list a {
+	align-items: center;
+	min-height: 60px; 
+}
+
+ .navbar-list a {
+	color: #ccc;
 }
 
 .navbar-list a {
-  margin: 0 10px;
-  padding: 0 10px;
-  text-decoration: none;
+	margin: 0 10px;
+	padding: 0 10px;
+	text-decoration: none;
 }
-
-.navbar-list a:hover {
-  color: #ff3f00;
-}
-
-/* sections */
 
 .home {
-  width: 100%;  
-  height: 100%;
-  background-image: url('../images/bckg-home.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+	position: relative;
+	width: 100%;  
+	height: 100%;
+	background-image: url('../img/bckg-home_small.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .about {
-  width:  100%;
-  height: 50%;
-  background: #000;
+	width:  100%;
+	height: 50%;
+	background: #000;
 }
 
-/* Section 'Projects' */
-
-.anchor {
-	position: absolute;
-	z-index: -1;
-	top: -90px;
-	display: block;
-}
 .projects {
 	position: relative;
-  height: auto;
-  min-height: 400px;
+	height: auto;
+	min-height: 400px;
 	padding: 30px;
-  background-color: #000;
+	background-color: #000;
 }
 
 .projects-title {
 	margin-bottom: 20px;
-  font-size: 2.5rem;
-  text-align: center;  
+	font-size: 2.5rem;
+	font-weight: bolder;
+	text-align: center;  
 }
+
 .projects-folio {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
+
 .project-card {
-  width: 330px;
-  height: 220px;
-  margin: 20px;
-  background-color: #eee;
-  background-image: url('../images/330-220-soon.jpg');
-  background-position: center;
-  border: 1px solid #bbb;
+	margin: 20px;
+ 	border: 1px solid #bbb;
+	width: 330px;
+	height: 220px;
+	background-color: #eee;
+	background-image: url('../img/330-220-soon.jpg');
+	background-position: center;
+	background-size: cover;
 }
 
 .project-01 {
-  background-image: url('../images/330-220-fcc-tribute.jpg');
+	background-image: url('../img/330-220-fcc-tribute.jpg');
 }
 
 .project-02 {
-	background-image: url('../images/330-220-fcc-portfolio.jpg');
+	background-image: url('../img/330-220-fcc-portfolio.jpg');
 }
 
 .hidden .card-button {
@@ -132,20 +132,14 @@ header {
 }
 
 .card-overlay {
-  display: flex;
-  flex-wrap: wrap; 
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  -webkit-transition: opacity 0.35s ease;
-  -moz-transition: opacity 0.35s ease;
-}
-
-.card-overlay:hover {
-  opacity: 1;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap; 
+	justify-content: space-evenly;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
 }
 
 .card-text {
@@ -153,122 +147,433 @@ header {
 	margin: 0 30px;
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.5);
-		
-/*	border: 1px solid #000;*/
 	text-align: center;
 }
 .card-button {
-  display: block;
-/*  margin-bottom: 5%;*/
-  padding: 0;
-  width: 65px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #bbb;
-/*  border-radius: 4px;*/
-  font-size: 1rem;
+	display: block;
+	border: 1px solid #bbb;
+	width: 65px;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 1rem;
 }
 
 .card-button a {
-  display: block;
-  margin: 0;
-  padding: 10px 15px;
-  color: #ccc;
-  text-decoration: none;
-}
-
-.card-button:hover a {
-  color: #ff3f00;
+	display: block;
+	margin: 0;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #ccc;
 }
 
 span {
-/*  opacity: 0;*/
-  display: block;
+	display: block;
 }
 
-
 /* Section 'Contact' */
-
 .contact {
-  background-image: url('../images/bckg-contact.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+	background-image: url('../img/bckg-contact_small.jpg');
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .contact-title {
 	padding-top: 20px;
 	font-size: 2.5rem;
-  text-align: center;  
+	font-weight: bolder;
+	text-align: center;  
 }
+
 /* Contact form */
+
 form {
 	display: flex;
+	height: 73vh;
+	min-height: 400px;
 }
+
 .contact-form {
 	display: flex;
 	flex-direction: column;
-	width: 40vw;
-  height: 350px;
-	padding: 30px 5vw;
+	width: 80vw;
+	height: 350px;
+	margin: auto;
+	padding: 30px 0;
 }
 
 label {
 	display: block;
 	color: #eee;
 }
+
 input, textarea {
-  height: 30px;
-  margin: 2px 0 15px 0;
-	padding: 0 10px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #bbb;
+	margin: 2px 0 15px 0;
+	border: 1px solid #bbb;
 	border-radius: 10px;
-  color: #bbb;
-  font-size: 1rem;
+	height: 30px;
+	padding: 0 10px;
+	background: rgba(0, 0, 0, 0.8);
+	font-size: 1rem;
+	color: #bbb;
 }
 
 textarea {
-  height: 120px;
-  
+	height: 120px;
 }
 
-input[type=submit]:hover {
-	background-color: #ff3f00;
-}
 
 /* Footer */
 
 .main-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap-reverse;
-  
-  min-height: 100px;
-  background: rgba(0, 0, 0, 0.8);
-  border-top: 1px solid #bbb;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	border-top: 1px solid #bbb;
+	min-height: 100px;
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .footer-elem {
-  margin: 14px;
+	margin: 14px;
   
 }
+
 .footer-elem a {
-  margin: 0 14px;
+	margin: 0 14px;
 }
 
 .copyrights {
-  margin: 14px;
-  text-align: center;
-  font-weight: 600;
+	margin: 14px;
+	font-weight: 600;
+	text-align: center;
 }
 
 .footer-elem .icon {
-  color: #ccc;
-  font-size: 2.5rem
+	font-size: 2.5rem;
+	color: #ccc;
 }
 
-.footer-elem .icon:hover {
-  color: #ff3f00;  
+
+@media screen and (min-width: 640px) {
+	
+	header {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.header-logo {
+		flex-basis: 40%;
+		align-self: center;
+	}
+	
+	header img {
+		max-width: 200px;
+		padding: 10%;
+	}
+	
+	.header-title {
+		flex-basis: 60%;
+		align-self: center;
+	}
+	
+	.navbar {
+		flex-basis: 100%;
+		align-self: center;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.home {
+		background-image: url('../img/bckg-home_medium.jpg');
+	}
+	
+	.contact {
+		background-image: url('../img/bckg-contact_medium.jpg');
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	header {
+		flex-wrap: nowrap;
+  		position: fixed;
+  		z-index: 99;
+  		width: 100%;
+		height: 90px;
+		border-bottom: 1px solid #bbb;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	.header-logo {
+		flex-basis: 15%;
+		max-width: 120px;	
+	}
+	
+	.header-title {
+		display: flex;
+		flex-direction: row;
+		flex-basis: 55%;	
+	}
+	
+	header h2 {
+		margin:  1.9em 0 0;
+	}
+	
+	.logo  {
+		height: 90px;
+		margin: 0 auto;
+	}
+
+	.navbar {
+		flex-basis: 30%;
+  		flex-wrap: wrap;
+  		border: none; 
+  		padding: 0 20px; 
+	}
+
+	.navbar-list {
+  		flex-grow: 1;
+  		flex-wrap: wrap;
+  		justify-content: flex-end;
+  		margin-left: auto;
+  		text-transform: uppercase;
+	}
+
+	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
+		display: flex;
+		align-items: center;
+  		min-height: 90px; 
+	}
+
+ 	.navbar-list a{
+  		color: #ccc;
+	}
+
+	.navbar-list a {
+  		margin: 0 10px;
+  		padding: 0 10px;
+  		text-decoration: none;
+	}
+
+	.navbar-list a:hover {
+  		color: #ff3f00;
+	}
+
+/* sections */
+
+	.home {
+		position: relative;
+		width: 100%;  
+		height: 100%;
+		background-image: url('../img/bckg-home.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.about {
+		width:  100%;
+		height: 50%;
+		background: #000;
+	}
+
+/* Section 'Projects' */
+
+	.projects .anchor {
+		position: absolute;
+		z-index: -1;
+		top: -90px;
+		display: block;
+	}
+	
+	.projects {
+		position: relative;
+		height: auto;
+		min-height: 400px;
+		padding: 30px;
+		background-color: #000;
+	}
+
+	.projects-title {
+		margin-bottom: 20px;
+		font-size: 2.5rem;
+		font-weight: bolder;
+		text-align: center;  
+	}
+	
+	.projects-folio {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	
+	.project-card {
+		margin: 20px;
+		border: 1px solid #bbb;
+		width: 330px;
+		height: 220px;
+		background-color: #eee;
+		background-image: url('../img/330-220-soon.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+
+	.project-01 {
+		background-image: url('../img/330-220-fcc-tribute.jpg');
+	}
+
+	.project-02 {
+		background-image: url('../img/330-220-fcc-portfolio.jpg');
+	}
+
+	.hidden .card-button {
+		visibility: hidden;
+	}
+
+	.card-overlay {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap; 
+		justify-content: space-evenly;
+		opacity: 0;
+		-webkit-transition: opacity 0.35s ease;
+		-moz-transition: opacity 0.35s ease;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	.card-overlay:hover {
+		opacity: 1;
+	}
+
+	.card-text {
+		display: block;
+		margin: 0 30px;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.5);
+		text-align: center;
+	}
+	
+	.card-button {
+		display: block;
+		border: 1px solid #bbb;
+		width: 65px;
+		padding: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		font-size: 1rem;
+	}
+
+	.card-button a {
+		display: block;
+		margin: 0;
+		padding: 10px 15px;
+		text-decoration: none;
+		color: #ccc;
+	}
+
+	.card-button:hover a {
+		color: #ff3f00;
+	}
+
+	span {
+		display: block;
+	}
+
+	/* Section 'Contact' */
+
+	.contact {
+		position: relative;
+		background-image: url('../img/bckg-contact.jpg');
+		background-attachment: fixed;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.contact-title {
+		padding-top: 20px;
+		font-size: 2.5rem;
+		font-weight: bolder;
+		text-align: center;  
+	}
+
+	/* Contact form */
+
+	form {
+		display: flex;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		width: 40vw;
+		height: 350px;
+		padding: 30px 5vw;
+	}
+
+	label {
+		display: block;
+		color: #eee;
+	}
+
+	input, textarea {
+		margin: 2px 0 15px 0;
+		border: 1px solid #bbb;
+		border-radius: 10px;
+		height: 30px;
+		padding: 0 10px;
+		background: rgba(0, 0, 0, 0.8);
+		font-size: 1rem;
+		color: #bbb;
+	}
+
+	textarea {
+		height: 120px;
+	}
+
+	input[type=submit]:hover {
+		background-color: #ff3f00;
+	}
+
+	/* Footer */
+
+	.main-footer {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap-reverse;
+		justify-content: space-around;
+		border-top: 1px solid #bbb;
+		min-height: 100px;
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.footer-elem {
+		margin: 14px;
+	}
+
+	.footer-elem a {
+		margin: 0 14px;
+	}
+
+	.copyrights {
+		margin: 14px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.footer-elem .icon {
+		font-size: 2.5rem;
+		color: #ccc;
+	}
+
+	.footer-elem .icon:hover {
+		color: #ff3f00;  
+	}
+
 }
