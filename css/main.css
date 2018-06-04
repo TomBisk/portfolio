@@ -430,6 +430,10 @@ textarea {
 	.project-02 {
 		background-image: url('../img/330-220-fcc-portfolio.jpg');
 	}
+	
+	.project-03 {
+		background-image: url('../img/330-220-uda-pixel.jpg');
+	}
 
 	.hidden .card-button {
 		visibility: hidden;
