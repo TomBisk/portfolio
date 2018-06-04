@@ -127,6 +127,10 @@ header h2 {
 	background-image: url('../img/330-220-fcc-portfolio.jpg');
 }
 
+.project-03 {
+	background-image: url('../img/330-220-uda-pixel.jpg');
+}
+
 .hidden .card-button {
 	visibility: hidden;
 }
@@ -412,6 +416,7 @@ textarea {
 		justify-content: space-evenly;
 	}
 	
+/*
 	.project-card {
 		margin: 20px;
 		border: 1px solid #bbb;
@@ -422,7 +427,9 @@ textarea {
 		background-position: center;
 		background-size: cover;
 	}
+*/
 
+/*
 	.project-01 {
 		background-image: url('../img/330-220-fcc-tribute.jpg');
 	}
@@ -430,10 +437,17 @@ textarea {
 	.project-02 {
 		background-image: url('../img/330-220-fcc-portfolio.jpg');
 	}
+	
+	.project-03 {
+		background-image: url('../img/330-220-uda-pixel.jpg');
+	}
+*/
+/*
 
 	.hidden .card-button {
 		visibility: hidden;
 	}
+*/
 
 	.card-overlay {
 		display: flex;
@@ -494,6 +508,13 @@ textarea {
 		background-position: top;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	
+	.contact .anchor {
+		position: absolute;
+		z-index: -1;
+		top: -90px;
+		display: block;
 	}
 
 	.contact-title {
