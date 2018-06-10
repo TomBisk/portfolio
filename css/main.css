@@ -433,7 +433,7 @@ textarea {
   		margin: 0 10px;
   		padding: 0 10px;
 	}
-
+	
 	.navbar-list a:hover {
   		color: #ff3f00;
 	}
@@ -463,13 +463,12 @@ textarea {
 		color: #ff3f00;
 	}
 
-
 	/* 'Contact' section (min-width: 1100px) */
 	.contact {
 		position: relative;
 		background-image: url('../img/bckg-contact.jpg');
 	}
-
+	
 	/* Contact form (min-width: 1100px) */
 	.contact-form {
 		width: 40vw;
