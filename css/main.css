@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
-/* Nexus 5 res: 360x640 */
-/* Apple IPad res: 768x1024 */
-/* asus laser 2 res: 360x 640  pixel ratio 2*/
 
 html {
 	height: 100%;
@@ -15,6 +12,7 @@ body {
 	height: 100%;
 }
 
+/* Header (width: 320px) */
 header {
 	display: flex;
 	flex-direction: column;
@@ -24,8 +22,8 @@ header {
 }
 
 .header-logo  {
-	max-width: 250px;
 	margin: 0 auto;
+	max-width: 250px;
 }
 
 header img {
@@ -39,8 +37,8 @@ header h1 {
 }
 
 header h2 {
-	text-align: center;
 	font-size: 1.25em;
+	text-align: center;
 }
 
 .navbar {
@@ -70,6 +68,7 @@ header h2 {
 	text-decoration: none;
 }
 
+/* 'About' section (width: 320px) */
 .home {
 	position: relative;
 	width: 100%;  
@@ -86,6 +85,16 @@ header h2 {
 	background: #000;
 }
 
+.about-article {
+	position: absolute;
+	margin: 90% 0 0 3%;
+	padding: 3px 10px;
+	background: rgba(0, 0, 0, 0.8);
+	font-size: ;
+	line-height: 1.5em; 
+}
+
+/* 'Projects' section (width: 320px) */
 .projects {
 	position: relative;
 	height: auto;
@@ -153,6 +162,7 @@ header h2 {
 	background-color: rgba(0, 0, 0, 0.5);
 	text-align: center;
 }
+
 .card-button {
 	display: block;
 	border: 1px solid #bbb;
@@ -174,7 +184,7 @@ span {
 	display: block;
 }
 
-/* Section 'Contact' */
+/* 'Contact' section (width: 320px) */
 .contact {
 	background-image: url('../img/bckg-contact_small.jpg');
 	background-attachment: fixed;
@@ -190,7 +200,7 @@ span {
 	text-align: center;  
 }
 
-/* Contact form */
+/* Contact form (width: 320px) */
 
 form {
 	display: flex;
@@ -201,9 +211,9 @@ form {
 .contact-form {
 	display: flex;
 	flex-direction: column;
+	margin: auto;
 	width: 80vw;
 	height: 350px;
-	margin: auto;
 	padding: 30px 0;
 }
 
@@ -228,8 +238,7 @@ textarea {
 }
 
 
-/* Footer */
-
+/* Footer (width: 320px) */
 .main-footer {
 	display: flex;
 	align-items: center;
@@ -288,27 +297,25 @@ textarea {
 		flex-basis: 100%;
 		align-self: center;
 	}
+	
+	/* 'About' section (width: 640px) */
+	.about-article {
+		margin: 30% 0 0 3%;
+	}
+
 }
+
 
 @media screen and (min-width: 768px) {
-	.home {
-		background-image: url('../img/bckg-home_medium.jpg');
-	}
-	
-	.contact {
-		background-image: url('../img/bckg-contact_medium.jpg');
-	}
-}
 
-@media screen and (min-width: 1200px) {
-	
+	/* Header (min-width: 768px) */
 	header {
 		flex-wrap: nowrap;
   		position: fixed;
   		z-index: 99;
+		border-bottom: 1px solid #bbb;
   		width: 100%;
 		height: 90px;
-		border-bottom: 1px solid #bbb;
 		background-color: rgba(0, 0, 0, 0.7);
 	}
 	
@@ -319,12 +326,17 @@ textarea {
 	
 	.header-title {
 		display: flex;
-		flex-direction: row;
-		flex-basis: 55%;	
+		flex-direction: column;
+		flex-basis: 50%;
+	}
+	
+	header h1 {
+		margin: 0 0.5em;
+		font-size: 2.4em;
 	}
 	
 	header h2 {
-		margin:  1.9em 0 0;
+		margin:  0.1em 0 0;
 	}
 	
 	.logo  {
@@ -333,7 +345,7 @@ textarea {
 	}
 
 	.navbar {
-		flex-basis: 30%;
+		flex-basis: 35%;
   		flex-wrap: wrap;
   		border: none; 
   		padding: 0 20px; 
@@ -341,260 +353,134 @@ textarea {
 
 	.navbar-list {
   		flex-grow: 1;
-  		flex-wrap: wrap;
   		justify-content: flex-end;
   		margin-left: auto;
-  		text-transform: uppercase;
 	}
 
 	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
 		display: flex;
-		align-items: center;
   		min-height: 90px; 
 	}
 
- 	.navbar-list a{
-  		color: #ccc;
+	.navbar-list a {
+  		margin: 0 5px;
+  		padding: 0 5px;
+		font-size: 0.9em;
+	}
+
+	/* 'About' section (min-width: 768px) */
+	.home {
+		background-image: url('../img/bckg-home_medium.jpg');
+	}
+	
+	.about-article {
+		margin: 80% 0 0 3%;
+		font-size: 1.6em;
+	}
+	
+	/* 'Contact' section (min-width: 768px) */
+	.contact {
+		position: relative;
+		background-image: url('../img/bckg-contact_medium.jpg');
+	}
+	
+	.projects .anchor, .contact .anchor {
+		position: absolute;
+		z-index: -1;
+		top: -90px;
+		display: block;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	
+	.about-article {
+		margin: 50% 0 0 3%;
+		font-size: 1.6em;
+	}
+}
+
+
+@media screen and (min-width: 1100px) {
+	
+	.header-logo {
+		flex-basis: 15%;
+	}
+	
+	.header-title {
+		flex-direction: row;
+		flex-basis: 55%;	
+	}
+	
+	header h1 {
+		margin: 0.5em;
+	}
+	
+	header h2 {
+		margin:  1.7em 0 0;
+	}
+	
+	.navbar {
+		flex-basis: 30%;
+	}
+
+	.navbar, .navbar-logo, .navbar-list, .navbar-list a {
+		align-items: center; 
 	}
 
 	.navbar-list a {
   		margin: 0 10px;
   		padding: 0 10px;
-  		text-decoration: none;
 	}
-
+	
 	.navbar-list a:hover {
   		color: #ff3f00;
 	}
 
-/* sections */
-
+	/* 'About' section (min-width: 1100px) */
 	.home {
-		position: relative;
-		width: 100%;  
-		height: 100%;
 		background-image: url('../img/bckg-home.jpg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.about {
-		width:  100%;
-		height: 50%;
-		background: #000;
-	}
-
-/* Section 'Projects' */
-
-	.projects .anchor {
-		position: absolute;
-		z-index: -1;
-		top: -90px;
-		display: block;
 	}
 	
-	.projects {
-		position: relative;
-		height: auto;
-		min-height: 400px;
-		padding: 30px;
-		background-color: #000;
+	.about-article {
+		margin: 40% 0 0 3%;
+		font-size: 1.6em;
 	}
 
-	.projects-title {
-		margin-bottom: 20px;
-		font-size: 2.5rem;
-		font-weight: bolder;
-		text-align: center;  
-	}
-	
-	.projects-folio {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-	}
-	
-/*
-	.project-card {
-		margin: 20px;
-		border: 1px solid #bbb;
-		width: 330px;
-		height: 220px;
-		background-color: #eee;
-		background-image: url('../img/330-220-soon.jpg');
-		background-position: center;
-		background-size: cover;
-	}
-*/
-
-/*
-	.project-01 {
-		background-image: url('../img/330-220-fcc-tribute.jpg');
-	}
-
-	.project-02 {
-		background-image: url('../img/330-220-fcc-portfolio.jpg');
-	}
-	
-	.project-03 {
-		background-image: url('../img/330-220-uda-pixel.jpg');
-	}
-*/
-/*
-
-	.hidden .card-button {
-		visibility: hidden;
-	}
-*/
-
+	/* 'Projects' section (min-width: 1100px) */
 	.card-overlay {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap; 
-		justify-content: space-evenly;
 		opacity: 0;
 		-webkit-transition: opacity 0.35s ease;
 		-moz-transition: opacity 0.35s ease;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.6);
 	}
 
 	.card-overlay:hover {
 		opacity: 1;
 	}
-
-	.card-text {
-		display: block;
-		margin: 0 30px;
-		padding: 20px;
-		background-color: rgba(0, 0, 0, 0.5);
-		text-align: center;
-	}
 	
-	.card-button {
-		display: block;
-		border: 1px solid #bbb;
-		width: 65px;
-		padding: 0;
-		background-color: rgba(0, 0, 0, 0.5);
-		font-size: 1rem;
-	}
-
-	.card-button a {
-		display: block;
-		margin: 0;
-		padding: 10px 15px;
-		text-decoration: none;
-		color: #ccc;
-	}
-
 	.card-button:hover a {
 		color: #ff3f00;
 	}
 
-	span {
-		display: block;
-	}
-
-	/* Section 'Contact' */
-
+	/* 'Contact' section (min-width: 1100px) */
 	.contact {
 		position: relative;
 		background-image: url('../img/bckg-contact.jpg');
-		background-attachment: fixed;
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
 	}
 	
-	.contact .anchor {
-		position: absolute;
-		z-index: -1;
-		top: -90px;
-		display: block;
-	}
-
-	.contact-title {
-		padding-top: 20px;
-		font-size: 2.5rem;
-		font-weight: bolder;
-		text-align: center;  
-	}
-
-	/* Contact form */
-
-	form {
-		display: flex;
-	}
-
+	/* Contact form (min-width: 1100px) */
 	.contact-form {
-		display: flex;
-		flex-direction: column;
 		width: 40vw;
-		height: 350px;
 		padding: 30px 5vw;
-	}
-
-	label {
-		display: block;
-		color: #eee;
-	}
-
-	input, textarea {
-		margin: 2px 0 15px 0;
-		border: 1px solid #bbb;
-		border-radius: 10px;
-		height: 30px;
-		padding: 0 10px;
-		background: rgba(0, 0, 0, 0.8);
-		font-size: 1rem;
-		color: #bbb;
-	}
-
-	textarea {
-		height: 120px;
 	}
 
 	input[type=submit]:hover {
 		background-color: #ff3f00;
 	}
 
-	/* Footer */
-
-	.main-footer {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap-reverse;
-		justify-content: space-around;
-		border-top: 1px solid #bbb;
-		min-height: 100px;
-		background: rgba(0, 0, 0, 0.8);
-	}
-
-	.footer-elem {
-		margin: 14px;
-	}
-
-	.footer-elem a {
-		margin: 0 14px;
-	}
-
-	.copyrights {
-		margin: 14px;
-		font-weight: 600;
-		text-align: center;
-	}
-
-	.footer-elem .icon {
-		font-size: 2.5rem;
-		color: #ccc;
-	}
-
+	/* Footer (min-width: 100px) */
 	.footer-elem .icon:hover {
 		color: #ff3f00;  
 	}
-
 }
