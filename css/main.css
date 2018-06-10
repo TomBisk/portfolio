@@ -85,6 +85,15 @@ header h2 {
 	background: #000;
 }
 
+.about-article {
+	position: absolute;
+	margin: 50% 0 0 3%;
+	padding: 3px 10px;
+	background: rgba(0, 0, 0, 0.8);
+	font-size: ;
+	line-height: 1.5em; 
+}
+
 /* 'Projects' section (width: 320px) */
 .projects {
 	position: relative;
@@ -191,7 +200,7 @@ span {
 	text-align: center;  
 }
 
-/* Contact form */
+/* Contact form (width: 320px) */
 
 form {
 	display: flex;
@@ -229,7 +238,7 @@ textarea {
 }
 
 
-/* Footer */
+/* Footer (width: 320px) */
 .main-footer {
 	display: flex;
 	align-items: center;
@@ -288,6 +297,12 @@ textarea {
 		flex-basis: 100%;
 		align-self: center;
 	}
+	
+	/* 'About' section (width: 640px) */
+	.about-article {
+		margin: 20% 0 0 3%;
+	}
+
 }
 
 
@@ -358,6 +373,11 @@ textarea {
 		background-image: url('../img/bckg-home_medium.jpg');
 	}
 	
+	.about-article {
+		margin: 80% 0 0 3%;
+		font-size: 1.6em;
+	}
+	
 	/* 'Contact' section (min-width: 768px) */
 	.contact {
 		position: relative;
@@ -369,6 +389,15 @@ textarea {
 		z-index: -1;
 		top: -90px;
 		display: block;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	
+	.about-article {
+		margin: 40% 0 0 3%;
+		font-size: 1.6em;
 	}
 }
 
