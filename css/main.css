@@ -374,7 +374,7 @@ textarea {
 	}
 	
 	.about-article {
-		margin: 80% 0 0 3%;
+		margin: 50% 0 0 3%;
 		font-size: 1.6em;
 	}
 	
@@ -396,7 +396,7 @@ textarea {
 @media screen and (min-width: 1024px) {
 	
 	.about-article {
-		margin: 40% 0 0 3%;
+		margin: 30% 0 0 3%;
 		font-size: 1.6em;
 	}
 }
